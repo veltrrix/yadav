@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASHISH BHAI</title>
+  
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1071055655384876');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1071055655384876&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0b0516;
+      background-image:
+        radial-gradient(ellipse 700px 400px at 10% 0%, rgba(124, 58, 237, 0.25), transparent 60%),
+        radial-gradient(ellipse 600px 400px at 95% 15%, rgba(217, 70, 239, 0.18), transparent 55%),
+        radial-gradient(ellipse 800px 500px at 50% 100%, rgba(34, 211, 238, 0.08), transparent 60%),
+        linear-gradient(145deg, #0b0516 0%, #180b2b 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      padding: 16px;
+      color: #f4f1fb;
+    }
+
+    .card {
+      max-width: 460px;
+      width: 100%;
+      background: rgba(15, 6, 32, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 44px;
+      padding: 36px 26px 34px;
+      box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(124, 58, 237, 0.15);
+      transition: all 0.2s;
+    }
+
+    .top-badge {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 26px;
+    }
+
+    .top-badge-inner {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #b7abd6;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 7px 20px 7px 18px;
+      border-radius: 100px;
+      backdrop-filter: blur(4px);
+    }
+
+    .top-badge-inner .ping {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22d3ee;
+      box-shadow: 0 0 12px #22d3ee;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.7); }
+    }
+
+    .profile-box {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 28px;
+      border-radius: 32px;
+      background: linear-gradient(145deg, #1f0e3a, #110722);
+      border: 2px solid rgba(255, 255, 255, 0.06);
+      box-shadow:
+        0 0 0 1px rgba(124, 58, 237, 0.2),
+        0 20px 40px -16px #7c3aed80;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .profile-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-align: center;
+      line-height: 1.15;
+      background: linear-gradient(120deg, #ffffff 20%, #22d3ee 55%, #d946ef 90%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 14px;
+    }
+
+    .subhead {
+      text-align: center;
+      color: #b7abd6;
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 340px;
+      margin: 0 auto 30px;
+    }
+
+    .subhead strong {
+      color: #f4f1fb;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 28px;
+    }
+
+    .cta-main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 360px;
+      padding: 17px 20px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(95deg, #fbbf24, #d946ef 50%, #7c3aed);
+      color: #0c0518;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      box-shadow: 0 12px 36px -8px rgba(217, 70, 239, 0.45);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 44px -10px rgba(217, 70, 239, 0.65);
+    }
+
+    .cta-main svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .note-small {
+      font-size: 12px;
+      color: #5f5480;
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto 28px;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 14px 6px;
+      text-align: center;
+    }
+
+    .stat-item .number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #f4f1fb;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-item .label {
+      font-size: 10.5px;
+      color: #8f7eb3;
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .feature-list {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .feature-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .feature-row .feat-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .feat-icon.purple { background: rgba(124, 58, 237, 0.18); }
+    .feat-icon.pink { background: rgba(217, 70, 239, 0.16); }
+    .feat-icon.cyan { background: rgba(34, 211, 238, 0.13); }
+    .feat-icon.gold { background: rgba(251, 191, 36, 0.15); }
+
+    .feature-row .feat-text {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .feature-row .feat-text strong {
+      display: block;
+      color: #f4f1fb;
+      font-weight: 600;
+      font-size: 13.5px;
+      margin-bottom: 2px;
+    }
+
+    .feature-row .feat-text span {
+      color: #8f7eb3;
+      font-size: 11.5px;
+    }
+
+    .footer-meta {
+      margin-top: 30px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: #3d2f5a;
+      text-align: center;
+      letter-spacing: 0.04em;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      padding-top: 20px;
+    }
+
+    /* auto-join toast */
+    .auto-toast {
+      margin-top: 16px;
+      padding: 10px 14px;
+      background: rgba(34, 211, 238, 0.08);
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      border-radius: 60px;
+      font-size: 13px;
+      color: #b7d6e8;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: opacity 0.3s;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.02em;
+    }
+    .auto-toast.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @media (max-width: 420px) {
+      .card { padding: 28px 18px 26px; border-radius: 32px; }
+      h1 { font-size: 27px; }
+      .profile-box { width: 130px; height: 130px; }
+      .cta-main { font-size: 15px; padding: 14px 16px; }
+      .stats-grid .number { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+<div class="card" id="appCard">
+
+  <div class="top-badge">
+    <div class="top-badge-inner">
+      <span class="ping"></span>
+      FREE COMMUNITY ACCESS
+    </div>
+  </div>
+
+  <!-- PROFILE BOX — swap src to your real image -->
+  <div class="profile-box">
+    <img src="ashish.jpg" alt="CodeForge">
+  </div>
+
+  <h1>ASHISH BHAI</h1>
+  <p class="subhead">
+    <strong>Join the exclusive free VIP Telegram channel now</strong>
+  </p>
+
+  <div class="cta-group">
+    <a href="https://t.me/+Rlg0yHpdFTAxNTRl" class="cta-main" id="telegramCta">
+      <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.05-2 1.93c-.23.23-.42.42-.83.42z"/></svg>
+      Join on Telegram
+    </a>
+    <div class="note-small">Free to join · Public community · No card needed</div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-item"><div class="number">4.9k+</div><div class="label">members</div></div>
+    <div class="stat-item"><div class="number">100%</div><div class="label">safe</div></div>
+    <div class="stat-item"><div class="number">Daily</div><div class="label">Guide</div></div>
+  </div>
+
+
+
+  <!-- auto-join timer toast -->
+  <div id="autoJoinToast" class="auto-toast hidden">
+    ⏳ auto-join in <span id="timerDisplay">300</span>s
+  </div>
+
+  <div class="footer-meta">
+    codeforge.chat · run by builders, for builders
+  </div>
+
+</div>
+
+<script>
+  (function() {
+    "use strict";
+
+    // ------- CONFIG ---------
+    const COUNTDOWN_SECONDS = 3000;   // 300 seconds = 5 minutes
+    const TELEGRAM_LINK = 'https://t.me/+Rlg0yHpdFTAxNTRl';  // <-- replace with real invite
+
+    // ------- DOM refs -------
+    const toast = document.getElementById('autoJoinToast');
+    const timerSpan = document.getElementById('timerDisplay');
+    const ctaBtn = document.getElementById('telegramCta');
+
+    // set real href (keep # fallback)
+    ctaBtn.href = TELEGRAM_LINK;
+
+    // ------- state ----------
+    let remaining = COUNTDOWN_SECONDS;
+    let timerInterval = null;
+    let isJoining = false;          // prevent multiple triggers
+
+    // ------- helpers ---------
+    function formatTime(sec) {
+      return String(sec);
+    }
+
+    function showToast() {
+      toast.classList.remove('hidden');
+    }
+
+    function hideToast() {
+      toast.classList.add('hidden');
+    }
+
+    // trigger auto‑join: simulate click on CTA + visual feedback
+    function triggerAutoJoin() {
+      if (isJoining) return;
+      isJoining = true;
+
+      // clear timer
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+
+      // update toast to show "joining"
+      timerSpan.textContent = '⚡';
+      toast.style.borderColor = 'rgba(251, 191, 36, 0.6)';
+      toast.style.background = 'rgba(251, 191, 36, 0.12)';
+      toast.style.color = '#fbbf24';
+      toast.textContent = '🚀 Auto-joining ...';
+
+      // flash the CTA
+      ctaBtn.style.transition = 'transform 0.15s, box-shadow 0.2s';
+      ctaBtn.style.transform = 'scale(0.96)';
+      ctaBtn.style.boxShadow = '0 0 0 4px rgba(251, 191, 36, 0.6), 0 12px 36px -8px rgba(217, 70, 239, 0.6)';
+      setTimeout(() => {
+        ctaBtn.style.transform = 'scale(1)';
+        ctaBtn.style.boxShadow = '0 18px 44px -10px rgba(217, 70, 239, 0.65)';
+      }, 200);
+
+      // simulate click after a tiny delay (so user sees the flash)
+      setTimeout(() => {
+        ctaBtn.click();
+        // also open in new tab if the link is external (fallback)
+        // but we rely on href, so it will navigate.
+        // extra: show a success message in toast
+        toast.textContent = '✅ Joined! Welcome to CodeForge 🚀';
+        toast.style.borderColor = 'rgba(34, 211, 238, 0.5)';
+        toast.style.background = 'rgba(34, 211, 238, 0.1)';
+        toast.style.color = '#a5f3fc';
+        // keep visible
+      }, 350);
+
+      // hide toast after 6 sec (but keep it visible for a while)
+      setTimeout(() => {
+        hideToast();
+      }, 7000);
+    }
+
+    // countdown tick
+    function tick() {
+      remaining -= 1;
+      if (remaining <= 0) {
+        // stop timer
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        timerSpan.textContent = '0';
+        // trigger auto-join
+        triggerAutoJoin();
+        return;
+      }
+      timerSpan.textContent = formatTime(remaining);
+    }
+
+    // start countdown and show toast
+    function startAutoJoinCountdown() {
+      // reset state
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      remaining = COUNTDOWN_SECONDS;
+      isJoining = false;
+
+      // restore toast style
+      toast.style.borderColor = 'rgba(34, 211, 238, 0.2)';
+      toast.style.background = 'rgba(34, 211, 238, 0.08)';
+      toast.style.color = '#b7d6e8';
+      toast.textContent = '⏳ auto-join in ';
+      // re-append timer span
+      const newSpan = document.createElement('span');
+      newSpan.id = 'timerDisplay';
+      newSpan.textContent = formatTime(remaining);
+      toast.appendChild(newSpan);
+      toast.appendChild(document.createTextNode('s')); // add 's' after
+      // fix: remove old timerSpan ref and set new
+      // but we already have timerSpan variable, we need to update it
+      // simplest: reassign
+      const oldSpan = document.getElementById('timerDisplay');
+      if (oldSpan) oldSpan.remove();
+      const freshSpan = document.createElement('span');
+      freshSpan.id = 'timerDisplay';
+      freshSpan.textContent = formatTime(remaining);
+      toast.textContent = '⏳ auto-join in ';
+      toast.appendChild(freshSpan);
+      toast.appendChild(document.createTextNode('s'));
+      // update timerSpan reference
+      window.timerSpan = freshSpan;
+
+      showToast();
+
+      // start interval
+      timerInterval = setInterval(() => {
+        // re-get timerSpan in case it was replaced
+        const currentSpan = document.getElementById('timerDisplay');
+        if (!currentSpan) {
+          // if span missing, stop
+          if (timerInterval) clearInterval(timerInterval);
+          return;
+        }
+        let val = parseInt(currentSpan.textContent, 10);
+        if (isNaN(val)) val = remaining;
+        val -= 1;
+        if (val <= 0) {
+          currentSpan.textContent = '0';
+          if (timerInterval) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+          }
+          triggerAutoJoin();
+          return;
+        }
+        currentSpan.textContent = String(val);
+        remaining = val; // keep in sync
+      }, 1000);
+    }
+
+    // -------- init -----------
+    // if user clicks CTA manually, we cancel auto-join (polite)
+    function handleManualJoin(e) {
+      // if already joining via auto, we still allow manual but we cancel timer
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      // hide toast
+      hideToast();
+      // but we don't prevent default — let the link work
+      // we also reset isJoining flag
+      isJoining = false;
+      // also remove any pending auto trigger
+    }
+
+    ctaBtn.addEventListener('click', handleManualJoin);
+
+    // start the countdown after a small delay (so page loads clean)
+    setTimeout(() => {
+      startAutoJoinCountdown();
+    }, 800);
+
+    // extra: if user hovers or interacts, we keep it running, no change.
+
+    // expose for debugging (optional)
+    window.__codeforge = { startAutoJoinCountdown, triggerAutoJoin };
+
+  })();
+</script>
+
+</body>
+</html>
